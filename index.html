@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAN TIEN SHOP</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#090909;color:white;
+ font-family:Arial,sans-serif
+}
+header{
+ background:linear-gradient(120deg,#650000,#160000);
+ padding:28px 16px;text-align:center;
+ border-bottom:2px solid #ff2424
+}
+header h1{color:#ff2929;font-size:34px;margin:5px}
+header p{color:#ddd}
+nav{
+ display:flex;justify-content:center;gap:22px;
+ padding:15px;background:#151515;flex-wrap:wrap
+}
+nav a{color:white;text-decoration:none}
+nav a:hover{color:red}
+.hero{
+ text-align:center;padding:55px 15px;
+ background:radial-gradient(#450000,#090909 70%)
+}
+.hero h2{font-size:30px;color:#ff2929}
+.btn{
+ display:inline-block;padding:13px 22px;
+ background:#e00000;color:white;
+ border-radius:8px;text-decoration:none;
+ font-weight:bold;border:0;cursor:pointer
+}
+.container{max-width:1050px;margin:auto;padding:25px 16px}
+h2.section{color:#ff2929;text-align:center}
+.products{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:18px;margin-top:25px
+}
+.product{
+ background:#181818;border:1px solid #4b1717;
+ border-radius:12px;padding:20px;text-align:center
+}
+.product h3{color:#ff3939}
+.price{font-size:22px;color:#ffd04a;font-weight:bold}
+.product p{color:#ccc}
+.contact{
+ background:#1b1111;padding:28px;
+ text-align:center;border-radius:12px
+}
+footer{
+ margin-top:35px;padding:22px;text-align:center;
+ background:#151515;color:#aaa
+}
+input{
+ padding:12px;width:100%;margin:12px 0;
+ background:#222;color:white;border:1px solid #555;
+ border-radius:7px
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🔥 VAN TIEN SHOP 🔥</h1>
+<p>UY TÍN - CHẤT LƯỢNG - AN TOÀN</p>
+</header>
+
+<nav>
+<a href="#home">Trang chủ</a>
+<a href="#shop">Danh sách acc</a>
+<a href="#contact">Liên hệ</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>WELCOME TO VAN TIEN SHOP</h2>
+<p>Shop mua bán tài khoản game</p>
+<a href="#shop" class="btn">XEM KHO ACC</a>
+</section>
+
+<main class="container" id="shop">
+<h2 class="section">⚔️ DANH SÁCH TÀI KHOẢN ⚔️</h2>
+<input id="search" placeholder="Tìm kiếm tài khoản..."
+oninput="renderProducts()">
+<div class="products" id="products"></div>
+</main>
+
+<section class="container" id="contact">
+<div class="contact">
+<h2 style="color:#ff2929">LIÊN HỆ VAN TIEN</h2>
+<p>Muốn mua acc? Liên hệ trực tiếp với shop nhé!</p>
+<p>Zalo: 0775627783</p>
+<a class="btn" target="_blank"
+href="https://zalo.me/0775627783">CHAT ZALO NGAY</a>
+</div>
+</section>
+
+<footer>
+<p>© 2026 VAN TIEN SHOP</p>
+<p>Website bán tài khoản game</p>
+</footer>
+
+<script>
+const products = [
+ {name:"Acc game mẫu 01",price:"Liên hệ",desc:"Thông tin tài khoản sẽ được cập nhật"},
+ {name:"Acc game mẫu 02",price:"Liên hệ",desc:"Thông tin tài khoản sẽ được cập nhật"},
+ {name:"Acc game mẫu 03",price:"Liên hệ",desc:"Thông tin tài khoản sẽ được cập nhật"}
+];
+
+function renderProducts(){
+ const keyword=document.getElementById("search").value.toLowerCase();
+ const list=products.filter(p=>p.name.toLowerCase().includes(keyword));
+ document.getElementById("products").innerHTML=list.map(p=>`
+ <div class="product">
+ <h3>${p.name}</h3>
+ <p>${p.desc}</p>
+ <div class="price">${p.price}</div>
+ <br>
+ <a class="btn" target="_blank"
+ href="https://zalo.me/0775627783">MUA NGAY</a>
+ </div>`).join("");
+}
+renderProducts();
+</script>
+
+</body>
+</html>
