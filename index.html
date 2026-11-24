@@ -3,212 +3,138 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VAN TIEN SHOP</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VAN TIEN CÀY THUÊ</title>
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;background:#080808;color:white;
- font-family:Arial,sans-serif;overflow-x:hidden
-}
-body:before{
- content:"";position:fixed;inset:0;z-index:-1;
- background:
- radial-gradient(ellipse at 15% 20%,#45000066,transparent 45%),
- radial-gradient(ellipse at 85% 70%,#70000044,transparent 45%);
-}
-header{
- padding:22px 15px;text-align:center;
- background:linear-gradient(120deg,#350000,#090909,#520000);
- border-bottom:2px solid #f22;
-}
-.logo{
- font-size:34px;font-weight:1000;letter-spacing:3px;
- color:#ff2525;text-shadow:0 0 12px red,0 0 28px #a00;
- animation:glow 2s infinite alternate
-}
-@keyframes glow{
- from{text-shadow:0 0 8px red}
- to{text-shadow:0 0 25px red,0 0 40px #900}
-}
-header p{color:#ccc;letter-spacing:3px;font-size:11px}
-nav{
- position:sticky;top:0;z-index:10;
- display:flex;justify-content:center;gap:25px;
- padding:15px;background:#101010ee;
- border-bottom:1px solid #481010;
- backdrop-filter:blur(10px)
-}
-nav a{color:white;text-decoration:none;font-weight:bold}
-nav a:hover{color:#ff2525}
-.hero{
- min-height:350px;display:flex;align-items:center;
- justify-content:center;text-align:center;padding:35px 15px;
- background:linear-gradient(120deg,#210000,#080808,#310000);
- position:relative;overflow:hidden
-}
-.hero:before{
- content:"";position:absolute;width:250px;height:250px;
- border:1px solid #ff222255;border-radius:50%;
- box-shadow:0 0 80px #e0000033;
- animation:spin 12s linear infinite
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero-content{position:relative;z-index:1}
-.hero h2{font-size:clamp(28px,6vw,52px);color:#ff2525;
- text-shadow:0 0 20px red;margin:10px}
-.hero p{color:#ddd}
-.btn{
- display:inline-block;padding:14px 24px;
- background:linear-gradient(100deg,#9e0000,#ff2929);
- color:white;text-decoration:none;font-weight:bold;
- border-radius:9px;box-shadow:0 0 15px #c00;
- border:0;cursor:pointer
-}
-.btn:hover{transform:scale(1.05);box-shadow:0 0 25px red}
-.container{max-width:1100px;margin:auto;padding:35px 16px}
-.heading{text-align:center;color:#ff2929;font-size:26px}
-.sub{text-align:center;color:#aaa}
-.features{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
- gap:12px;margin-top:25px
-}
-.feature{
- background:#171111;border:1px solid #501515;
- padding:18px;text-align:center;border-radius:12px
-}
-.feature span{font-size:27px}
-.feature p{color:#ccc;font-size:13px}
-.products{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
- gap:18px;margin-top:25px
-}
-.product{
- background:linear-gradient(145deg,#1e1111,#0d0d0d);
- border:1px solid #591414;border-radius:15px;
- padding:22px;text-align:center;
- transition:.3s;position:relative;overflow:hidden
-}
-.product:hover{
- transform:translateY(-7px);
- border-color:#ff2525;box-shadow:0 0 25px #a0000055
-}
-.product .symbol{font-size:48px;margin:10px}
-.product h3{color:#ff3535}
-.price{color:#ffd34f;font-size:23px;font-weight:bold}
-.product p{color:#bbb;font-size:14px}
-input{
- width:100%;padding:14px;border-radius:9px;
- border:1px solid #662020;background:#151515;
- color:white;margin-top:15px;outline:none
-}
-input:focus{border-color:red}
-.contact{
- background:linear-gradient(130deg,#310000,#111);
- border:1px solid #752020;border-radius:15px;
- text-align:center;padding:30px
-}
-.zalo{
- position:fixed;right:18px;bottom:20px;z-index:20;
- background:#087cf0;color:white;border-radius:50px;
- padding:15px 19px;text-decoration:none;
- font-weight:bold;box-shadow:0 0 18px #087cf0
-}
-footer{
- background:#101010;text-align:center;padding:25px;
- border-top:1px solid #541010;color:#aaa
-}
-@media(max-width:500px){
- nav{gap:13px;font-size:13px}
- .logo{font-size:26px}
- .hero{min-height:300px}
-}
+body{margin:0;background:#080808;color:white;font-family:Arial}
+header{text-align:center;padding:28px 12px;background:linear-gradient(120deg,#650000,#090909)}
+.logo{font-size:30px;font-weight:900;color:#ff2525;text-shadow:0 0 18px red}
+nav{display:flex;justify-content:center;gap:20px;padding:16px;background:#171717;flex-wrap:wrap}
+nav a{color:white;text-decoration:none}
+.hero{text-align:center;padding:65px 15px;background:radial-gradient(#500000,#080808 70%)}
+.hero h1{font-size:36px;color:#ff2828}
+.btn{display:inline-block;background:#e00000;color:white;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+.container{max-width:950px;margin:auto;padding:30px 16px}
+.heading{text-align:center;color:#ff3030}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.item{background:#191919;border:1px solid #641818;border-radius:12px;padding:22px;text-align:center}
+.item .emoji{font-size:42px}
+.item h3{color:#ff3838}
+.price{color:#ffd34b;font-size:21px;font-weight:bold}
+form{background:#171717;padding:22px;border:1px solid #641818;border-radius:12px}
+input,select,textarea{width:100%;padding:13px;margin:8px 0 15px;background:#292929;border:1px solid #555;border-radius:7px;color:white}
+label{color:#ddd}
+.contact{text-align:center;background:#230b0b;padding:30px;border-radius:12px}
+footer{text-align:center;padding:25px;background:#151515;color:#aaa}
 </style>
 </head>
 <body>
-
 <header>
- <div class="logo">🔥 VAN TIEN SHOP 🔥</div>
- <p>GAMING ACCOUNT STORE • UY TÍN • CHẤT LƯỢNG</p>
+ <div class="logo">🔥 VAN TIEN 🔥</div>
+ <p>DỊCH VỤ CÀY THUÊ GAME</p>
 </header>
 
 <nav>
- <a href="#home">TRANG CHỦ</a>
- <a href="#shop">KHO ACC</a>
- <a href="#contact">LIÊN HỆ</a>
+ <a href="#home">Trang chủ</a>
+ <a href="#services">Dịch vụ</a>
+ <a href="#order">Đặt đơn</a>
+ <a href="#contact">Liên hệ</a>
 </nav>
 
 <section class="hero" id="home">
- <div class="hero-content">
-  <h2>VAN TIEN SHOP</h2>
-  <p>THẾ GIỚI TÀI KHOẢN GAME CỦA BẠN</p>
-  <p>🔥 KHO ACC GAME • GIAO DỊCH TRỰC TIẾP</p>
-  <a href="#shop" class="btn">KHÁM PHÁ NGAY</a>
+ <h1>VAN TIEN CÀY THUÊ</h1>
+ <p>UY TÍN - NHIỆT TÌNH - CHUYÊN NGHIỆP</p>
+ <p>Đồng hành cùng bạn chinh phục mọi thử thách!</p>
+ <a href="#services" class="btn">XEM DỊCH VỤ</a>
+</section>
+
+<section class="container" id="services">
+ <h2 class="heading">⚔️ DỊCH VỤ CÀY THUÊ</h2>
+ <div class="grid">
+  <div class="item">
+   <div class="emoji">🏆</div>
+   <h3>Cày rank</h3>
+   <p>Hỗ trợ nâng hạng theo mục tiêu</p>
+   <div class="price">Báo giá</div>
+   <br><a href="#order" class="btn">Đặt dịch vụ</a>
+  </div>
+  <div class="item">
+   <div class="emoji">⚡</div>
+   <h3>Cày nhiệm vụ</h3>
+   <p>Hỗ trợ hoàn thành nhiệm vụ game</p>
+   <div class="price">Báo giá</div>
+   <br><a href="#order" class="btn">Đặt dịch vụ</a>
+  </div>
+  <div class="item">
+   <div class="emoji">💎</div>
+   <h3>Cày sự kiện</h3>
+   <p>Hỗ trợ hoàn thành sự kiện</p>
+   <div class="price">Báo giá</div>
+   <br><a href="#order" class="btn">Đặt dịch vụ</a>
+  </div>
+  <div class="item">
+   <div class="emoji">🎮</div>
+   <h3>Huấn luyện game</h3>
+   <p>Hướng dẫn kỹ năng và chiến thuật</p>
+   <div class="price">Báo giá</div>
+   <br><a href="#order" class="btn">Đặt dịch vụ</a>
+  </div>
  </div>
 </section>
 
-<main class="container">
- <h2 class="heading">⚡ DỊCH VỤ CỦA SHOP ⚡</h2>
- <div class="features">
-  <div class="feature"><span>🎮</span><p>ACC GAME</p></div>
-  <div class="feature"><span>🔥</span><p>ƯU ĐÃI</p></div>
-  <div class="feature"><span>💎</span><p>CHẤT LƯỢNG</p></div>
-  <div class="feature"><span>💬</span><p>HỖ TRỢ</p></div>
- </div>
-</main>
+<section class="container" id="order">
+ <h2 class="heading">📝 ĐẶT DỊCH VỤ</h2>
+ <form id="orderForm">
+  <label>Tên khách hàng</label>
+  <input id="customer" required placeholder="Nhập tên của bạn">
 
-<section class="container" id="shop">
- <h2 class="heading">🎯 KHO TÀI KHOẢN 🎯</h2>
- <p class="sub">Chọn tài khoản bạn muốn mua</p>
- <input id="search" placeholder="🔎 Tìm tài khoản..." oninput="render()">
- <div class="products" id="products"></div>
+  <label>Game cần hỗ trợ</label>
+  <input id="game" required placeholder="Tên game">
+
+  <label>Dịch vụ</label>
+  <select id="service">
+   <option>Cày rank</option>
+   <option>Cày nhiệm vụ</option>
+   <option>Cày sự kiện</option>
+   <option>Huấn luyện game</option>
+  </select>
+
+  <label>Mục tiêu cần đạt</label>
+  <textarea id="goal" required placeholder="Mô tả yêu cầu của bạn"></textarea>
+
+  <button class="btn" type="submit">GỬI ĐƠN HÀNG</button>
+ </form>
 </section>
 
 <section class="container" id="contact">
  <div class="contact">
-  <h2 class="heading">🔥 LIÊN HỆ VAN TIEN 🔥</h2>
-  <p>Thắc mắc hoặc muốn mua tài khoản?</p>
-  <p>Zalo: 0775627783</p>
-  <a class="btn" href="https://zalo.me/0775627783"
-     target="_blank">CHAT ZALO NGAY</a>
+  <h2 style="color:#ff2929">VAN TIEN SUPPORT</h2>
+  <p>Zalo hỗ trợ: 0775627783</p>
+  <a class="btn" href="https://zalo.me/0775627783">LIÊN HỆ ZALO</a>
  </div>
 </section>
 
-<a class="zalo" href="https://zalo.me/0775627783"
- target="_blank">💬 ZALO</a>
-
 <footer>
- <h3 style="color:#ff2929">VAN TIEN SHOP</h3>
- <p>© 2026 VAN TIEN SHOP - ALL RIGHTS RESERVED</p>
- <p>Thank you for visiting ❤️</p>
+ <h3 style="color:#ff2929">VAN TIEN CÀY THUÊ</h3>
+ <p>© 2026 VAN TIEN - ALL RIGHTS RESERVED</p>
 </footer>
 
 <script>
-const accounts=[
- {name:"Tài khoản game mẫu 01",price:"Liên hệ",desc:"Thông tin acc sẽ cập nhật",icon:"🎮"},
- {name:"Tài khoản game mẫu 02",price:"Liên hệ",desc:"Thông tin acc sẽ cập nhật",icon:"🔥"},
- {name:"Tài khoản game mẫu 03",price:"Liên hệ",desc:"Thông tin acc sẽ cập nhật",icon:"💎"}
-];
-
-function render(){
- const q=document.getElementById("search").value.toLowerCase();
- const items=accounts.filter(a=>a.name.toLowerCase().includes(q));
- document.getElementById("products").innerHTML=
- items.map(a=>`
- <article class="product">
- <div class="symbol">${a.icon}</div>
- <h3>${a.name}</h3>
- <p>${a.desc}</p>
- <div class="price">${a.price}</div>
- <br>
- <a class="btn" target="_blank"
- href="https://zalo.me/0775627783">MUA NGAY</a>
- </article>`).join("") ||
- '<p style="text-align:center">Không tìm thấy tài khoản.</p>';
-}
-render();
+document.getElementById("orderForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const order =
+ "ĐƠN ĐẶT DỊCH VỤ VAN TIEN\n"+
+ "Khách hàng: "+document.getElementById("customer").value+"\n"+
+ "Game: "+document.getElementById("game").value+"\n"+
+ "Dịch vụ: "+document.getElementById("service").value+"\n"+
+ "Mục tiêu: "+document.getElementById("goal").value;
+ if(navigator.clipboard){
+  navigator.clipboard.writeText(order).catch(()=>{});
+ }
+ alert("Đơn đã được chuẩn bị. Nội dung đơn đã được sao chép nếu trình duyệt cho phép. Hãy liên hệ shop để xác nhận.");
+ window.open("https://zalo.me/0775627783","_blank");
+});
 </script>
-
 </body>
 </html>
